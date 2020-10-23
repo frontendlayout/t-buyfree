@@ -1,0 +1,10 @@
+._lnk {
+    position: relative;
+    display: inline-flex; align-items: center; justify-content: center;
+    text-decoration: underline;
+    @media ( $_lg ) {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

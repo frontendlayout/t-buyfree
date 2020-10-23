@@ -1,0 +1,35 @@
+extends ../layout/base
+
+include ../items/page-products-item
+
+block variables
+    - var title = 'Главная | BuyFree';
+    - var pageClass = 'page index';
+
+block content
+
+    //- ( container ) swiper slider section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    section.container.popular-section
+
+        //- ( h1 ) section title
+        div.popular-section__title
+            h1 Популярные товары
+
+        //- ( swiper-container ) swiper container box ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        div.swiper-unit
+            div.swiper-container
+                ul.page__products.swiper-wrapper
+                    +pageProductsItem( '256.jpg', '28990 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+                    +pageProductsItem( '256.jpg', '31943 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+                    +pageProductsItem( '256.jpg', '28990 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+                    +pageProductsItem( '256.jpg', '28990 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+                    +pageProductsItem( '256.jpg', '28990 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+                    +pageProductsItem( '256.jpg', '28990 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+                    +pageProductsItem( '256.jpg', '28990 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+                    +pageProductsItem( '256.jpg', '28990 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+                    +pageProductsItem( '256.jpg', '28990 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+                    +pageProductsItem( '256.jpg', '28990 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+                    +pageProductsItem( '256.jpg', '28990 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+                    +pageProductsItem( '256.jpg', '28990 ₽', 'Lenovo IdeaPad D330-10IGM 81MD002XRU' )
+            div.swiper-button-next
+            div.swiper-button-prev

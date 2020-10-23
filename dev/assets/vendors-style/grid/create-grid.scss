@@ -1,0 +1,260 @@
+._D-n {display: none}
+._D-b {display: block}
+._D-i {display: inline}
+._D-ib {display: inline-block}
+._D-t {display: table}
+._D-tr {display: table-row}
+._D-tc {display: table-cell}
+._D-f {display: flex}
+._D-if {display: inline-flex}
+._D-с {display: contents}
+
+._F-a {flex: auto}
+._F-n {flex: none}
+._F-i {flex: initial}
+
+._FD-r {flex-direction: row}
+._FD-rr {flex-direction: row-reverse}
+._FD-c {flex-direction: column}
+._FD-cr {flex-direction: column-reverse}
+._FD-i {flex-direction: initial}
+
+._FW-n {flex-wrap: nowrap}
+._FW-w {flex-wrap: wrap}
+._FW-wr {flex-wrap: wrap-reverse}
+._FW-i {flex-wrap: initial}
+
+._JC-fs {justify-content: flex-start}
+._JC-fe {justify-content: flex-end}
+._JC-c {justify-content: center}
+._JC-sb {justify-content: space-between}
+._JC-sa {justify-content: space-around}
+._JC-i {justify-content: initial}
+
+._AI-fs {align-items: flex-start}
+._AI-fe {align-items: flex-end}
+._AI-c {align-items: center}
+._AI-b {align-items: baseline}
+._AI-s {align-items: stretch}
+._AI-i {align-items: initial}
+
+._AS-a {align-self: auto}
+._AS-fs {align-self: flex-start}
+._AS-fe {align-self: flex-end}
+._AS-c {align-self: center}
+._AS-b {align-self: baseline}
+._AS-s {align-self: stretch}
+._AS-i {align-self: initial}
+
+._AC-fs {align-content: flex-start}
+._AC-fe {align-content: flex-end}
+._AC-c {align-content: center}
+._AC-sb {align-content: space-between}
+._AC-sa {align-content: space-around}
+._AC-s {align-content: stretch}
+._AC-i {align-content: initial}
+
+._P-s {position: static;}
+._P-r {position: relative;}
+._P-a {position: absolute;}
+._P-f {position: fixed;}
+._P-i {position: initial;}
+
+@for $iter from -50 through 100 {
+
+	@if $iter == 0 {
+		._W-0 {width: 0;}
+		._W-a {width: auto;}
+		._W-i {width: initial;}
+		._MAW-i {max-width: initial;}
+		._MIW-i {min-width: initial;}
+
+		._T-0 {top: 0;}
+		._B-0 {bottom: 0;}
+		._L-0 {left: 0;}
+		._R-0 {right: 0;}
+	}
+
+	@else {
+		._T-#{$iter} {top: #{$iter * 1%}}
+		._B-#{$iter} {bottom: #{$iter * 1%}}
+		._L-#{$iter} {left: #{$iter * 1%}}
+		._R-#{$iter} {right: #{$iter * 1%}}
+
+		@if $iter > 0 {
+			._W-#{$iter} {width: #{$iter * 1%}}
+			._MAW-#{$iter} {max-width: #{$iter * 1%}}
+			._MIW-#{$iter} {min-width: #{$iter * 1%}}
+		}
+	}
+}
+
+@for $iter from -10 through 10 {
+
+	@if $iter == 0
+	{
+		._PT-0 {padding-top: 0}
+		._PB-0 {padding-bottom: 0}
+		._PL-0 {padding-left: 0}
+		._PR-0 {padding-right: 0}
+
+		._MT-0 {margin-top: 0}
+		._MB-0 {margin-bottom: 0}
+		._ML-0 {margin-left: 0}
+		._MR-0 {margin-right: 0}
+	}
+
+	@else
+	{
+		._T-#{$iter * 5} {top: #{5px * $iter}}
+		._B-#{$iter * 5} {bottom: #{5px * $iter}}
+		._L-#{$iter * 5} {left: #{5px * $iter}}
+		._R-#{$iter * 5} {right: #{5px * $iter}}
+
+		._MT-#{$iter * 5} {margin-top: #{5px * $iter}}
+		._MB-#{$iter * 5} {margin-bottom: #{5px * $iter}}
+		._ML-#{$iter * 5} {margin-left: #{5px * $iter}}
+		._MR-#{$iter * 5} {margin-right: #{5px * $iter}}
+
+		@if $iter > 0
+		{
+			._PT-#{$iter * 5} {padding-top: #{5px * $iter}}
+			._PB-#{$iter * 5} {padding-bottom: #{5px * $iter}}
+			._PL-#{$iter * 5} {padding-left: #{5px * $iter}}
+			._PR-#{$iter * 5} {padding-right: #{5px * $iter}}
+		}
+	}
+}
+
+@each $media, $suf in ( $_sm: $_sm-suf, $_md: $_md-suf, $_lg: $_lg-suf, $_xl: $_xl-suf ) {
+	@media ( #{$media} ) {
+
+		._D-n-#{$suf} {display: none}
+		._D-b-#{$suf} {display: block}
+		._D-i-#{$suf} {display: inline}
+		._D-ib-#{$suf} {display: inline-block}
+		._D-t-#{$suf} {display: table}
+		._D-tr-#{$suf} {display: table-row}
+		._D-tc-#{$suf} {display: table-cell}
+		._D-f-#{$suf} {display: flex}
+		._D-if-#{$suf} {display: inline-flex}
+		._D-с-#{$suf} {display: contents}
+
+		._F-a-#{$suf} {flex: auto}
+		._F-n-#{$suf} {flex: none}
+		._F-i-#{$suf} {flex: initial}
+
+		._FD-r-#{$suf} {flex-direction: row}
+		._FD-rr-#{$suf} {flex-direction: row-reverse}
+		._FD-c-#{$suf} {flex-direction: column}
+		._FD-cr-#{$suf} {flex-direction: column-reverse}
+		._FD-i-#{$suf} {flex-direction: initial}
+
+		._FW-n-#{$suf} {flex-wrap: nowrap}
+		._FW-w-#{$suf} {flex-wrap: wrap}
+		._FW-wr-#{$suf} {flex-wrap: wrap-reverse}
+		._FW-i-#{$suf} {flex-wrap: initial}
+
+		._JC-fs-#{$suf} {justify-content: flex-start}
+		._JC-fe-#{$suf} {justify-content: flex-end}
+		._JC-c-#{$suf} {justify-content: center}
+		._JC-sb-#{$suf} {justify-content: space-between}
+		._JC-sa-#{$suf} {justify-content: space-around}
+		._JC-i-#{$suf} {justify-content: initial}
+
+		._AI-fs-#{$suf} {align-items: flex-start}
+		._AI-fe-#{$suf} {align-items: flex-end}
+		._AI-c-#{$suf} {align-items: center}
+		._AI-b-#{$suf} {align-items: baseline}
+		._AI-s-#{$suf} {align-items: stretch}
+		._AI-i-#{$suf} {align-items: initial}
+
+		._AS-a-#{$suf} {align-self: auto}
+		._AS-fs-#{$suf} {align-self: flex-start}
+		._AS-fe-#{$suf} {align-self: flex-end}
+		._AS-c-#{$suf} {align-self: center}
+		._AS-b-#{$suf} {align-self: baseline}
+		._AS-s-#{$suf} {align-self: stretch}
+		._AS-i-#{$suf} {align-self: initial}
+
+		._AC-fs-#{$suf} {align-content: flex-start}
+		._AC-fe-#{$suf} {align-content: flex-end}
+		._AC-c-#{$suf} {align-content: center}
+		._AC-sb-#{$suf} {align-content: space-between}
+		._AC-sa-#{$suf} {align-content: space-around}
+		._AC-s-#{$suf} {align-content: stretch}
+		._AC-i-#{$suf} {align-content: initial}
+
+		._P-s-#{$suf} {position: static;}
+		._P-r-#{$suf} {position: relative;}
+		._P-a-#{$suf} {position: absolute;}
+		._P-f-#{$suf} {position: fixed;}
+		._P-i-#{$suf} {position: initial;}
+
+		@for $iter from -50 through 100 {
+
+			@if $iter == 0 {
+				._W-0-#{$suf} {width: 0;}
+				._W-a-#{$suf} {width: auto;}
+				._W-i-#{$suf} {width: initial;}
+				._MAW-i-#{$suf} {max-width: initial;}
+				._MIW-i-#{$suf} {min-width: initial;}
+
+				._T-0-#{$suf} {top: 0;}
+				._B-0-#{$suf} {bottom: 0;}
+				._L-0-#{$suf} {left: 0;}
+				._R-0-#{$suf} {right: 0;}
+			}
+
+			@else {
+				._T-#{$iter}-#{$suf} {top: #{$iter * 1%}}
+				._B-#{$iter}-#{$suf} {bottom: #{$iter * 1%}}
+				._L-#{$iter}-#{$suf} {left: #{$iter * 1%}}
+				._R-#{$iter}-#{$suf} {right: #{$iter * 1%}}
+
+				@if $iter > 0 {
+					._W-#{$iter}-#{$suf} {width: #{$iter * 1%}}
+					._MAW-#{$iter}-#{$suf} {max-width: #{$iter * 1%}}
+					._MIW-#{$iter}-#{$suf} {min-width: #{$iter * 1%}}
+				}
+			}
+		}
+
+		@for $iter from -10 through 10 {
+
+			@if $iter == 0
+			{
+				._PT-0-#{$suf} {padding-top: 0}
+				._PB-0-#{$suf} {padding-bottom: 0}
+				._PL-0-#{$suf} {padding-left: 0}
+				._PR-0-#{$suf} {padding-right: 0}
+
+				._MT-0-#{$suf} {margin-top: 0}
+				._MB-0-#{$suf} {margin-bottom: 0}
+				._ML-0-#{$suf} {margin-left: 0}
+				._MR-0-#{$suf} {margin-right: 0}
+			}
+
+			@else
+			{
+				._T-#{$iter * 5}-#{$suf} {top: #{5px * $iter}}
+				._B-#{$iter * 5}-#{$suf} {bottom: #{5px * $iter}}
+				._L-#{$iter * 5}-#{$suf} {left: #{5px * $iter}}
+				._R-#{$iter * 5}-#{$suf} {right: #{5px * $iter}}
+
+				._MT-#{$iter * 5}-#{$suf} {margin-top: #{5px * $iter}}
+				._MB-#{$iter * 5}-#{$suf} {margin-bottom: #{5px * $iter}}
+				._ML-#{$iter * 5}-#{$suf} {margin-left: #{5px * $iter}}
+				._MR-#{$iter * 5}-#{$suf} {margin-right: #{5px * $iter}}
+
+				@if $iter > 0
+				{
+					._PT-#{$iter * 5}-#{$suf} {padding-top: #{5px * $iter}}
+					._PB-#{$iter * 5}-#{$suf} {padding-bottom: #{5px * $iter}}
+					._PL-#{$iter * 5}-#{$suf} {padding-left: #{5px * $iter}}
+					._PR-#{$iter * 5}-#{$suf} {padding-right: #{5px * $iter}}
+				}
+			}
+		}
+	}
+}

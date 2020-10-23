@@ -1,0 +1,43 @@
+h1 {}
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+strong {
+    font-weight: bold;
+}
+
+.ttl {
+
+    &-extraLarge {
+        font-size: $_FS-extraLarge;
+    }
+    &-mediumLarge {
+        font-size: $_FS-mediumLarge;
+    }
+    &-large {
+        font-size: $_FS-large;
+    }
+    &-medium {
+        font-size: $_FS-medium;
+    }
+    &-default {
+        font-size: $_FS-default;
+    }
+    &-little {
+        font-size: $_FS-little;
+    }
+    &-small {
+        font-size: $_FS-small;
+    }
+    &-tiny {
+        font-size: $_FS-tiny;
+    }
+}
+

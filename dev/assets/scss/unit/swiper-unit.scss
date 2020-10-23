@@ -1,0 +1,26 @@
+.swiper-unit {
+    position: relative;
+
+    .swiper-button-prev {
+        display: none;
+        left: -35px; top: 85px;
+        @media ($_xl) {
+            display: flex;
+        }
+    }
+
+    .swiper-button-next {
+        display: none;
+        right: -35px; top: 85px;
+        @media ($_xl) {
+            display: flex;
+        }
+    }
+
+    .page__product {
+        width: calc( (100% - 2 * 10px) / 2.4 );
+        @media ($_md) {
+            width: calc( (100% - 4 * 10px) / 5 );
+        }
+    }
+}

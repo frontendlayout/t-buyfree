@@ -1,0 +1,39 @@
+html, body {
+	height: 100%;
+	font-size: $_FS-remContext;
+}
+body {
+	position: relative;
+	display: flex; flex-direction: column;
+	width: 100%; min-height: 100%;
+	line-height: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+	position: relative;
+	flex-grow: 1;
+	width: 100%;
+}
+
+.content, .container {
+	width: 100%; max-width: 1224px;
+	margin: 0 auto;
+	padding-left: 20px; padding-right: 20px;
+	@media ($_lg) {
+		padding-left: 30px; padding-right: 30px;
+	}
+	@media ($_xl) {
+		padding-left: 40px; padding-right: 40px;
+	}
+}
+
+.left-aside {}
+
+.right-aside {}
+
+.cont-aside-left {}
+
+.cont-aside-right {}
+
+.cont-aside-two {}

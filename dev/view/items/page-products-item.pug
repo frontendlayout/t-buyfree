@@ -1,0 +1,7 @@
+mixin pageProductsItem( imgName, price, title )
+    li.swiper-slide.page__product
+        a.product-card( href="/" )
+            span.product-card__photo
+                img.product-card__image( src="https://i.picsum.photos/id/119/256/"+imgName )
+            span.product-card__price !{price}
+            span.product-card__title !{title}

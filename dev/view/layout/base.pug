@@ -1,0 +1,24 @@
+block variables
+
+include ../helpers/helper
+
+doctype html
+html(lang='ru')
+
+    include ./head
+    |
+    body( class=pageClass )
+        |
+        block before
+        |
+        include ./header
+        |
+        main.page__main.wrapper
+            block content
+            |
+        include ./footer
+        |
+        script( type='text/javascript', src='./assets/script/vendors-script.js' )
+        script( type='text/javascript', src='./assets/script/script.js' )
+        |
+        block after

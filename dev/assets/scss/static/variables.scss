@@ -1,0 +1,33 @@
+$_sm                           : 'min-width: 576px' !global;
+$_sm-suf                       : 'sm' !global;
+
+$_md                           : 'min-width: 768px' !global;
+$_md-suf                       : 'md' !global;
+
+$_lg                           : 'min-width: 992px' !global;
+$_lg-suf                       : 'lg' !global;
+
+$_xl                           : 'min-width: 1200px' !global;
+$_xl-suf                       : 'xl' !global;
+
+$_FS-remContext                : 20px !global;
+
+$_FS-extraLarge                : rem(20px) !global;
+$_FS-mediumLarge               : rem(20px) !global;
+$_FS-large                     : rem(20px) !global;
+$_FS-medium                    : rem(20px) !global;
+$_FS-default                   : rem(20px) !global;
+$_FS-little                    : rem(20px) !global;
+$_FS-small                     : rem(20px) !global;
+$_FS-tiny                      : rem(20px) !global;
+
+$_Color--First                 : #ffffff !global;
+$_Color--Second                : #000000 !global;
+
+$_Color--Default               : #ffffff !global;
+$_Color--Primary               : #00ccff !global;
+$_Color--Success               : #26de81 !global;
+$_Color--Danger                : #fc5c65 !global;
+$_Color--Dark                  : #000000 !global;
+$_Color--Light                 : #999999 !global;
+$_Color--Warning               : #fed330 !global;
